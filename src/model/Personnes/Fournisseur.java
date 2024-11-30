@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Personnes;
+package model.Personnes;
 
 /**
  *
  * @author PC
  */
-import Operations.Transaction;
+import model.Operations.Transaction;
 import java.util.ArrayList;
-public class Fournisseur extends Personne{
+public final class Fournisseur extends Personne{
     private String entreprise;
     private ArrayList<Transaction> listTransaction;
 

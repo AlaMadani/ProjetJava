@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Operations;
+package model.Operations;
 
 /**
  *
@@ -24,7 +24,10 @@ public class Caisse {
         return valCaisse;
     }
 
-    public void setValCaisse(double valCaisse) {
+    public void setValCaisse(double valCaisse)throws ExceptionValeurInvalide{
+        if(valCaisse<0){
+            throw new ExceptionValeurInvalide("la valeur de la caisse doit etre positive!!!");
+        }
         this.valCaisse = valCaisse;
     }
     public void addValCaisse(double v){

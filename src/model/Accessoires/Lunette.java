@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Accessoires;
+package model.Accessoires;
 
 /**
  *
  * @author PC
  */
-public class Lunette extends Accessoire{
+public final class Lunette extends Accessoire{
     private boolean protectionUV;
     private String materiau;
     private String couleur;

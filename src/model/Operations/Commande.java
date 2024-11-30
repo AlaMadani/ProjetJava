@@ -2,17 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Operations;
+package model.Operations;
 
 /**
  *
  * @author PC
  */
-import Articles.Article;
-import Articles.Boutique;
-import Personnes.Client;
+import model.Articles.Article;
+import model.Articles.Boutique;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 public class Commande {

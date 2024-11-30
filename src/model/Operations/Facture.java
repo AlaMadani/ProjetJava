@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Operations;
+package model.Operations;
 
 /**
  *
  * @author PC
  */
-public abstract class Facture{
+public sealed abstract class Facture permits Facture_Client,Facture_Fournisseur{
     protected int numFact;
     protected String dateFact;
     protected Commande commande;

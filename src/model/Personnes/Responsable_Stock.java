@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Personnes;
+package model.Personnes;
 
 /**
  *
  * @author PC
  */
-import Articles.Article;
-import Articles.Boutique;
-import Articles.GestionStock;
+import model.Articles.Article;
+import model.Articles.Boutique;
+import model.Articles.GestionStock;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
-public class Responsable_Stock extends Employer implements Connectable,GestionStock{
+public final class Responsable_Stock extends Employer implements Connectable,GestionStock{
     private String username;
     private String password;
     private boolean connecte=false;

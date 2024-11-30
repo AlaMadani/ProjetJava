@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Personnes;
+package model.Personnes;
 
 /**
  *
  * @author PC
  */
-import Articles.Boutique;
+import model.Articles.Boutique;
 import java.util.Scanner;
-import Operations.Commande;
-import Operations.Transaction;
+import model.Operations.Commande;
+import model.Operations.Transaction;
 import java.util.ArrayList;
-import Operations.Caisse;
-import Operations.Facture_Client;
-public class Caissier extends Employer implements Connectable{
+import model.Operations.Caisse;
+import model.Operations.Facture_Client;
+public non-sealed class Caissier extends Employer implements Connectable{
     private String username;
     private String password;
     private Caisse caisse;
@@ -99,8 +99,8 @@ public class Caissier extends Employer implements Connectable{
         
     }
     public Transaction creerTransaction(Boutique b,Facture_Client fc,Scanner sc){
-        
-        Transaction tt=new Transaction(0,"","");
+        Facture_Client f=new Facture_Client();
+        Transaction tt=new Transaction(0,"","",f);
         seConnecter();
         if(isConnecte()){
         System.out.println("saisir le numero de transaction");
@@ -109,8 +109,7 @@ public class Caissier extends Employer implements Connectable{
         String t=sc.next();
         System.out.println("saisir la date de transaction");
         String d=sc.next();
-        Transaction tr=new Transaction(i,t,d);
-        tr.setFacture(fc);
+        Transaction tr=new Transaction(i,t,d,fc);
         Client client = fc.getClient();
         boolean clientExists = false;
         for (Client c : b.getListClients()) { 
@@ -125,7 +124,7 @@ public class Caissier extends Employer implements Connectable{
             b.getListClients().add(client);
         }
         if(ouvrirCaisse()){
-        tr.getFacture().setPayee(true);
+        fc.setPayee(true);
         caisse.addValCaisse(fc.getMontant());
         }
         fermerCaisse();

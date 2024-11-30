@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Personnes;
+package model.Personnes;
 
-import Accessoires.Montre;
-import Articles.Boutique;
-import Articles.Chaussure;
-import Articles.Vetement;
-import Operations.Caisse;
-import Operations.Commande;
-import Operations.Facture_Client;
+import model.Accessoires.Montre;
+import model.Articles.Boutique;
+import model.Articles.Chaussure;
+import model.Articles.Vetement;
+import model.Operations.Caisse;
+import model.Operations.Commande;
+import model.Operations.Facture_Client;
 import java.util.Scanner;
 
 /**

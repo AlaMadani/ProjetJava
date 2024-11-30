@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Accessoires;
+package model.Accessoires;
 
 /**
  *
  * @author PC
  */
-public class Montre extends Accessoire{
+public final class Montre extends Accessoire{
     private String type;
     private boolean isSmart;
     private boolean impermeable;

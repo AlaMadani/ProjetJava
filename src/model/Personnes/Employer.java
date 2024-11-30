@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Personnes;
+package model.Personnes;
 
 /**
  *
  * @author PC
  */
-public abstract class Employer extends Personne {
+public sealed abstract class Employer extends Personne permits Caissier,Responsable_RH,Responsable_Stock,Agent_Securite{
     private double salaire;
     private String numCompteBanc;
 

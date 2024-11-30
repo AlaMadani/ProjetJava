@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Operations;
+package model.Operations;
 
 /**
  *
  * @author PC
  */
-import Personnes.Client;
+import model.Personnes.Client;
 import java.util.Scanner;
-public class Facture_Client extends Facture{
+public final class Facture_Client extends Facture{
     private Client client;
 
     public Facture_Client(Client client, int numFact, String dateFact, Commande commande, Double montant) {
@@ -27,9 +27,12 @@ public class Facture_Client extends Facture{
     public void setClient(Client client) {
         this.client = client;
     }
+    
     public double calculerMontant(){
         double s=commande.getArticles().entrySet().stream().mapToDouble(entry->entry.getKey().getPrixv()*entry.getValue()).sum();
         setMontant(s);
+        Calculable montant=(f)->f.getCommande().getArticles().entrySet().stream().mapToDouble(entry->entry.getKey().getPrixv()*entry.getValue()).sum();
+        s=montant.calculerMontant(this);
         return s;
     }
     public void lireFactureCAuClavier(Scanner sc){

@@ -10,11 +10,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="int4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EmployersController">
    <children>
       <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="600.0" spacing="20.0">
          <children>
+            <Button mnemonicParsing="false" onAction="#clickedAjout" text="+Ajouter Employe">
+               <HBox.margin>
+                  <Insets right="190.0" />
+               </HBox.margin>
+            </Button>
             <TextField promptText="ex: Ahmed" />
             <Button mnemonicParsing="false" text="Rechercher" />
          </children>
@@ -90,14 +94,14 @@
          <children>
             <HBox alignment="BOTTOM_LEFT" maxWidth="1800.0" prefHeight="110.0" prefWidth="431.0">
                <children>
-                  <Button mnemonicParsing="false" text="Dashboard" />
+                  <Button mnemonicParsing="false" onAction="#clickedDec" text="Deconnexion" />
                </children>
                <HBox.margin>
                   <Insets />
                </HBox.margin>
             </HBox>
-            <Button mnemonicParsing="false" text="Precedent" />
-            <Button mnemonicParsing="false" text="Quitter" />
+            <Button mnemonicParsing="false" onAction="#clickedDash" text="Dashboard" />
+            <Button mnemonicParsing="false" onAction="#clickedQuit" text="Quitter" />
          </children>
          <padding>
             <Insets right="10.0" />

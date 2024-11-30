@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Personnes;
+package model.Personnes;
 
 /**
  *
  * @author PC
  */
-import Articles.Boutique;
+import model.Articles.Boutique;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class Responsable_RH extends Employer implements Connectable{
+public final class Responsable_RH extends Employer implements Connectable{
     private ArrayList<Employer> listEmployer;
     private String username;
     private String password;

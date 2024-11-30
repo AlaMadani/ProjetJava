@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Operations;
+package model.Operations;
 
 /**
  *
  * @author PC
  */
-import Personnes.Fournisseur;
-public class Facture_Fournisseur extends Facture{
+import model.Personnes.Fournisseur;
+public final class Facture_Fournisseur extends Facture{
     private Fournisseur fournisseur;
 
     public Facture_Fournisseur(Fournisseur fournisseur, int numFact, String dateFact, Commande commande, Double montant) {
@@ -24,6 +24,8 @@ public class Facture_Fournisseur extends Facture{
         double s = commande.getArticles().entrySet().stream()
             .mapToDouble(entry -> entry.getKey().getPrixa() * entry.getValue()).sum();
     setMontant(s);
+    Calculable montant=(f)->f.getCommande().getArticles().entrySet().stream().mapToDouble(entry->entry.getKey().getPrixa()*entry.getValue()).sum();
+        s=montant.calculerMontant(this);
         return s;
     }
 }

@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Accessoires;
+package model.Accessoires;
 
-import Articles.Article;
+import model.Articles.Article;
 
 /**
  *
  * @author PC
  */
-public class Accessoire extends Article{
+public sealed class Accessoire extends Article permits Lunette,Montre,Sac{
     private String marque;
 
     public Accessoire(String marque, int codeArticle, String nom, double prixa, double prixv, int stock) {
