@@ -24,7 +24,7 @@ public class BoutiqueVetements extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
             
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,728,408);
             stage.setTitle("Accueil");
             stage.setScene(scene);
             stage.show();

@@ -53,7 +53,7 @@ public class AccueilController implements Initializable {
              Stage st =new Stage();
              FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Connexion.fxml"));
              Parent root = loader.load();
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,600,300);
             st.setTitle("Connexion");
             st.setScene(scene);
             ConnexionController secondController = loader.getController();

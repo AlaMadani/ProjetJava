@@ -41,7 +41,9 @@ public class main {
         Commande com=ca.creerCommande(b, sc);
         Client cl=new Client("physique",11446752,"hamadi","ben mohamed",23130766,"AVENUE10MARS","HAMADI@gmail.com");
         Facture_Client fc=ca.creerFactureC(b, com, cl, sc);
+        System.out.println(fc.getMontant());
         ca.creerTransaction(b, fc, sc);
+        System.out.println(fc.getMontant());
         System.out.println("***************************************************");
         System.out.println(b);
         

@@ -28,11 +28,11 @@ public final class Facture_Client extends Facture{
         this.client = client;
     }
     
-    public double calculerMontant(){
-        double s=commande.getArticles().entrySet().stream().mapToDouble(entry->entry.getKey().getPrixv()*entry.getValue()).sum();
-        setMontant(s);
+    public Double calculerMontant(){
+        Double s;
         Calculable montant=(f)->f.getCommande().getArticles().entrySet().stream().mapToDouble(entry->entry.getKey().getPrixv()*entry.getValue()).sum();
-        s=montant.calculerMontant(this);
+        s=montant.calculermontant(this);
+        setMontant(s);
         return s;
     }
     public void lireFactureCAuClavier(Scanner sc){

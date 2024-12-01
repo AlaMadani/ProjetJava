@@ -16,24 +16,19 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 /**
  * FXML Controller class
  *
  * @author PC
  */
-public class ConnexionController implements Initializable {
+public class ResponsableStockDashboardController implements Initializable {
+
 
     @FXML
-    private Label poste;
-    @FXML
-    private VBox int2;
-    public void setPoste(String p){
-        poste.setText(p);
-    }
+    private VBox int3;
     /**
      * Initializes the controller class.
      */
@@ -41,25 +36,14 @@ public class ConnexionController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
+    
     @FXML
-    private void clickedlogin(ActionEvent event) {
-        String str="";
-        if(poste.getText().equals("ADMINISTRATEUR")){
-            str="AdminDashboard.fxml";
-        }
-        else if(poste.getText().equals("Responsable Stock")){
-              str="ResponsableStockDashboard.fxml";
-        }
-        else {
-            str="CaissierDashboard.fxml";
-        }
-         int2.getScene().getWindow().hide();
+    private void clickedadd(ActionEvent event) {
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource(str));
-            Scene scene = new Scene(root);
-            st.setTitle("Admin Dashboard");
+            Parent root = FXMLLoader.load(getClass().getResource("AjoutArticle.fxml"));
+            Scene scene = new Scene(root,400,400);
+            st.setTitle("Ajout Article");
             st.setScene(scene);
             
             st.show();
@@ -69,8 +53,8 @@ public class ConnexionController implements Initializable {
     }
 
     @FXML
-    private void clickedPrev(ActionEvent event) {
-         int2.getScene().getWindow().hide();
+    private void clickedDec(ActionEvent event) {
+          int3.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
@@ -85,8 +69,8 @@ public class ConnexionController implements Initializable {
     }
 
     @FXML
-    private void clickedCancel(ActionEvent event) {
+    private void clickedQuit(ActionEvent event) {
         Platform.exit();
     }
-    
+
 }

@@ -9,6 +9,6 @@ package model.Operations;
  * @author PC
  */
 public interface Calculable {
-    public double calculerMontant(Facture f);
+    public Double calculermontant(Facture f);
     
 }

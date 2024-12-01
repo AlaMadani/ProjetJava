@@ -20,12 +20,11 @@ public final class Facture_Fournisseur extends Facture{
     public Fournisseur getFournisseur() {
         return fournisseur;
     }
-    public double calculerMontant(){
-        double s = commande.getArticles().entrySet().stream()
-            .mapToDouble(entry -> entry.getKey().getPrixa() * entry.getValue()).sum();
-    setMontant(s);
+    public Double calculerMontant(){
+        Double s ;
     Calculable montant=(f)->f.getCommande().getArticles().entrySet().stream().mapToDouble(entry->entry.getKey().getPrixa()*entry.getValue()).sum();
-        s=montant.calculerMontant(this);
+        s=montant.calculermontant(this);
+        setMontant(s);
         return s;
     }
 }

@@ -1,0 +1,126 @@
+.root{
+     -fx-background-image: url("Screenshot 2024-12-01 134714.jpg");
+    -fx-background-size: contain; /* Adjust as needed: cover, contain, auto */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+  -fx-background: #333333;
+  -fx-text-fill: -text-white;
+  -fx-prompt-text-fill: rgba(255,255,255,.3);
+
+  -text-disabled: -text-disabled-dark;
+  -background-disabled:rgba(255,255,255,.12);
+  -background-fill: -text-dark;
+
+}
+.button {
+    -fx-background-color: #333333; /* Dark background */
+    -fx-text-fill: white; /* White text */
+    -fx-border-color: #555555; /* Slightly lighter border */
+    -fx-border-radius: 5px; /* Rounded corners */
+/* Padding inside the button 
+   -fx-font-weight: bold;*/
+}
+
+.button:hover {
+    -fx-background-color: #0066ff; /* Darker background on hover */
+    -fx-border-color: #777777; /* Lighter border on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #222222; /* Darkest background on press */
+    -fx-border-color: #888888; /* Lighter border on press */
+}
+
+/* TextField Style */
+.text-field {
+    -fx-background-color: #444444; /* Dark background */
+    -fx-text-fill: white; /* White text */
+    -fx-border-color: #555555; /* Slightly lighter border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-font-size: 14px; /* Font size */
+}
+
+.text-field:focused {
+    -fx-border-color: #0078d4; /* Blue border when focused */
+}
+
+.text-field:hover {
+    -fx-border-color: #777777; /* Lighter border on hover */
+}
+
+/* Optional: Adding focus effects for the button and textfield */
+.button:focused {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 120, 212, 0.5), 4, 0, 0, 2);
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 120, 212, 0.5), 4, 0, 0, 2);
+}
+
+
+/* RadioButton Style */
+.radio-button {
+    -fx-background-color: transparent; /* No background */
+    -fx-text-fill: white; /* White text */
+    -fx-padding: 10 0; /* Padding inside the radio button */
+    -fx-font-size: 14px; /* Font size */
+}
+
+.radio-button:selected {
+    -fx-text-fill: #0078d4; /* Blue text when selected */
+}
+
+.radio-button:selected .radio-button-focus-indicator {
+    -fx-fill: #0078d4; /* Blue focus ring when selected */
+}
+
+.radio-button:hover {
+    -fx-text-fill: #cccccc; /* Light gray text on hover */
+}
+
+.radio-button:focused {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 120, 212, 0.5), 4, 0, 0, 2); /* Blue focus effect */
+}
+
+/* ComboBox Style */
+.combo-box {
+    -fx-background-color: #444444; /* Dark background */
+    -fx-text-fill: white; /* White text */
+    -fx-border-color: #555555; /* Slightly lighter border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-padding: 5px; /* Padding inside the combo box */
+    -fx-font-size: 14px; /* Font size */
+}
+
+.combo-box:hover {
+    -fx-border-color: #777777; /* Lighter border on hover */
+}
+
+.combo-box:focused {
+    -fx-border-color: #0078d4; /* Blue border when focused */
+    -fx-background-color: #333333; /* Darker background on focus */
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* No background for the arrow button */
+    -fx-text-fill: #0078d4; /* Blue color for arrow */
+}
+
+.combo-box .arrow-button:hover {
+    -fx-text-fill: #cccccc; /* Lighter color for arrow on hover */
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #333333; /* Dark background for list items */
+    -fx-text-fill: white; /* White text for list items */
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #444444; /* Hover effect on list items */
+    -fx-text-fill: #0078d4; /* Blue text on hover */
+}
+
+.vbox {
+    -fx-background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+    -fx-opacity: 0.5; /* Adjust the opacity of the overlay */
+}
