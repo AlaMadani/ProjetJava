@@ -58,7 +58,7 @@ public class CaissierDashboardController implements Initializable {
          try {
              Stage st =new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,728,408);
             st.setTitle("Accueil");
             st.setScene(scene);
             

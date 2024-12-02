@@ -4,13 +4,15 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: center center;
   -fx-background: #333333;
-  -fx-text-fill: -text-white;
+  -fx-text-fill: white;
   -fx-prompt-text-fill: rgba(255,255,255,.3);
-
   -text-disabled: -text-disabled-dark;
   -background-disabled:rgba(255,255,255,.12);
   -background-fill: -text-dark;
 
+}
+.label {
+    -fx-font-family: "Papyrus";
 }
 .button {
     -fx-background-color: #333333; /* Dark background */
@@ -62,7 +64,6 @@
 .radio-button {
     -fx-background-color: transparent; /* No background */
     -fx-text-fill: white; /* White text */
-    -fx-padding: 10 0; /* Padding inside the radio button */
     -fx-font-size: 14px; /* Font size */
 }
 
@@ -123,4 +124,12 @@
 .vbox {
     -fx-background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
     -fx-opacity: 0.5; /* Adjust the opacity of the overlay */
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.white-label {
+    -fx-text-fill: white;
 }

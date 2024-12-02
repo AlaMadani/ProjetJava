@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="int1" stylesheets="@general.css" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AjoutEmployeController">
+<VBox fx:id="int1" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@general.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AjoutEmployeController">
    <children>
       <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0">
          <children>
@@ -26,26 +26,26 @@
          <children>
             <VBox>
                <children>
-                  <Label text="Label" />
+                  <Label text="Nom" />
                   <TextField />
-                  <Label text="Label" />
+                  <Label text="ID" />
                   <TextField />
-                  <Label text="Label" />
+                  <Label text="Numero du Compte Bancaire" />
                   <TextField />
-                  <Label text="Label" />
+                  <Label text="Adresse" />
                   <TextField />
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Label text="Label" />
+                  <Label text="Prenom" />
                   <TextField />
-                  <Label text="Label" />
+                  <Label text="Numero de Telephone" />
                   <TextField />
-                  <Label text="Label" />
+                  <Label text="Salaire" />
                   <TextField />
-                  <Label text="Label" />
-                  <TextField />
+                  <Label text="Adresse mail" />
+                  <TextField promptText="foulen@gmail.com" />
                </children>
             </VBox>
          </children>

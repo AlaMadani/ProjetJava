@@ -69,7 +69,6 @@
 .radio-button {
     -fx-background-color: transparent; /* No background */
     -fx-text-fill: white; /* White text */
-    -fx-padding: 10 0; /* Padding inside the radio button */
     -fx-font-size: 14px; /* Font size */
 }
 

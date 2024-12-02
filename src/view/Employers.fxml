@@ -10,27 +10,27 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="int4" stylesheets="@general.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EmployersController">
+<VBox fx:id="int4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@general.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EmployersController">
    <children>
       <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="600.0" spacing="20.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#clickedAjout" text="+Ajouter Employe">
+            <Button mnemonicParsing="false" onAction="#clickedAjout" prefHeight="32.0" prefWidth="154.0" text="+Ajouter Employe">
                <HBox.margin>
-                  <Insets right="190.0" />
+                  <Insets left="10.0" right="190.0" />
                </HBox.margin>
             </Button>
             <TextField promptText="ex: Ahmed" />
-            <Button mnemonicParsing="false" text="Rechercher" />
+            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="124.0" text="Rechercher" />
          </children>
          <padding>
             <Insets right="10.0" />
          </padding>
       </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="600.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="36.0" prefWidth="600.0">
          <children>
-            <Label text="Liste des employers :">
+            <Label prefHeight="27.0" prefWidth="135.0" text="Liste des employers :">
                <font>
-                  <Font size="25.0" />
+                  <Font size="22.0" />
                </font>
             </Label>
          </children>
@@ -38,13 +38,31 @@
             <Insets left="10.0" />
          </padding>
       </HBox>
+      <HBox prefHeight="33.0" prefWidth="600.0" spacing="30.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Nom&amp;Prenom" />
+            <Label text="Num.Tel" />
+            <Label text="NumCB" />
+            <Label text="Salaire" />
+            <Label text="\@" />
+            <Label text="\@mail">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </HBox>
       <ScrollPane prefHeight="201.0" prefWidth="600.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="579.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="235.0" prefWidth="579.0">
                <children>
-                  <HBox prefHeight="135.0" prefWidth="474.0">
+                  <HBox prefHeight="163.0" prefWidth="580.0" spacing="32.0">
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox prefHeight="163.0" prefWidth="41.0">
                            <children>
                               <Label text="Label" />
                               <Label text="Label" />
@@ -54,7 +72,7 @@
                               <Label text="Label" />
                            </children>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox prefHeight="163.0" prefWidth="83.0">
                            <children>
                               <Label text="Label" />
                               <Label text="Label" />
@@ -63,8 +81,11 @@
                               <Label text="Label" />
                               <Label text="Label" />
                            </children>
+                           <HBox.margin>
+                              <Insets left="-25.0" />
+                           </HBox.margin>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox prefHeight="163.0" prefWidth="76.0">
                            <children>
                               <Label text="Label" />
                               <Label text="Label" />
@@ -73,8 +94,11 @@
                               <Label text="Label" />
                               <Label text="Label" />
                            </children>
+                           <HBox.margin>
+                              <Insets left="-6.0" />
+                           </HBox.margin>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox prefHeight="163.0" prefWidth="66.0">
                            <children>
                               <Label text="Label" />
                               <Label text="Label" />
@@ -83,18 +107,76 @@
                               <Label text="Label" />
                               <Label text="Label" />
                            </children>
+                           <HBox.margin>
+                              <Insets left="-25.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="163.0" prefWidth="54.0">
+                           <children>
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="-13.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="163.0" prefWidth="77.0">
+                           <children>
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="-15.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="163.0" prefWidth="94.0">
+                           <children>
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Label" />
+                              <Label text="Label" />
+                              <Label text="Label" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="-25.0" />
+                           </HBox.margin>
                         </VBox>
                      </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
                   </HBox>
                </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
             </AnchorPane>
         </content>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
       </ScrollPane>
-      <HBox alignment="BOTTOM_RIGHT" prefHeight="110.0" prefWidth="600.0" spacing="10.0">
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="77.0" prefWidth="600.0" spacing="10.0">
          <children>
             <HBox alignment="BOTTOM_LEFT" maxWidth="1800.0" prefHeight="110.0" prefWidth="431.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#clickedDec" text="Deconnexion" />
+                  <Button mnemonicParsing="false" onAction="#clickedDec" text="Deconnexion">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Button>
                </children>
                <HBox.margin>
                   <Insets />
