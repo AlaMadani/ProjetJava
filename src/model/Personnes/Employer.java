@@ -8,11 +8,11 @@ package model.Personnes;
  *
  * @author PC
  */
-public sealed abstract class Employer extends Personne permits Caissier,Responsable_RH,Responsable_Stock,Agent_Securite{
+public sealed class Employer extends Personne permits Caissier,Responsable_RH,Responsable_Stock,Agent_Securite{
     private double salaire;
     private String numCompteBanc;
 
-    public Employer(double salaire, String numCompteBanc, int id, String nom, String prenom, int numtel, String adresse, String email) {
+    public Employer(Double salaire, String numCompteBanc, Integer id, String nom, String prenom, Integer numtel, String adresse, String email) {
         super(id, nom, prenom, numtel, adresse, email);
         this.salaire = salaire;
         this.numCompteBanc = numCompteBanc;

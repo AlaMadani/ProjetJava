@@ -40,7 +40,7 @@ public class AccueilController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        choiceBox.getItems().addAll("ADMINISTRATEUR", "Caissier", "Responsable Stock","Responsable RH");
+        choiceBox.getItems().addAll("ADMINISTRATEUR", "Caissier", "Responsable Stock");
     }   
     public String getValueCbox(){
         return choiceBox.getValue();

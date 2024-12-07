@@ -27,25 +27,25 @@
             <VBox>
                <children>
                   <Label text="Nom" />
-                  <TextField />
+                  <TextField fx:id="nomF" />
                   <Label text="ID" />
-                  <TextField />
+                  <TextField fx:id="idF" />
                   <Label text="Numero du Compte Bancaire" />
-                  <TextField />
+                  <TextField fx:id="ncbF" />
                   <Label text="Adresse" />
-                  <TextField />
+                  <TextField fx:id="adrF" />
                </children>
             </VBox>
             <VBox>
                <children>
                   <Label text="Prenom" />
-                  <TextField />
+                  <TextField fx:id="PrenomF" />
                   <Label text="Numero de Telephone" />
-                  <TextField />
+                  <TextField fx:id="telF" />
                   <Label text="Salaire" />
-                  <TextField />
+                  <TextField fx:id="salF" />
                   <Label text="Adresse mail" />
-                  <TextField promptText="foulen@gmail.com" />
+                  <TextField fx:id="mailF" promptText="foulen@gmail.com" />
                </children>
             </VBox>
          </children>

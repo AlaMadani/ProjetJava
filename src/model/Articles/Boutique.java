@@ -7,6 +7,8 @@ package model.Articles;
 import model.Personnes.Client;
 import model.Personnes.Employer;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -69,18 +71,27 @@ public class Boutique implements GestionStock{
 
     @Override
     public void ajouterArticle(Boutique b,Article a) {
+        
         articles.add(a);
     }
 
     @Override
-    public void suppArticle(Boutique b,Article a) {
-      articles.remove(a);
+    public void suppArticle(Boutique b,Article a) throws StockInsuffisantException{
+     if (a.getStock() <= 0) {
+            throw new StockInsuffisantException("Impossible de supprimer l'article '" + a.getNom() + "': stock insuffisant.");
+        }
+        articles.remove(a);
     }
-
     @Override
     public int verifierStock(Article a) {
        return a.getStock();
     }
+    public List<Article> trierArticlesParStockDesc() {
+    return articles.stream()
+            .sorted((a1, a2) -> Integer.compare(a2.getStock(), a1.getStock())) 
+            .collect(Collectors.toList()); 
+    }
+    
     @Override
 public String toString() {
     StringBuffer sb = new StringBuffer();
@@ -116,4 +127,15 @@ public String toString() {
     }
     return sb.toString();
 }
+    
+    public int calculerNombreEmployes() {
+        
+        CalculNombreEmployes calcul = new CalculNombreEmployes() {
+            @Override
+            public int calculer() {
+                return  employers.size(); 
+            }
+        };
+        return calcul.calculer(); 
+    }
 }

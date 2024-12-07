@@ -33,6 +33,10 @@ public sealed abstract class Facture permits Facture_Client,Facture_Fournisseur{
         this.montant = montant;
     }
 
+    public void setDateFact(String dateFact) {
+        this.dateFact = dateFact;
+    }
+
     public boolean isPayee() {
         return payee;
     }

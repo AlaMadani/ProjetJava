@@ -9,20 +9,24 @@ package model.Personnes;
  * @author PC
  */
 public sealed abstract class Personne permits Employer,Client,Fournisseur{
-    private final int id;
+    private Integer id;
     private String nom;
     private String prenom;
-    private int numtel;
+    private Integer numtel;
     private String adresse;
     private String email;
 
-    public Personne(int id, String nom, String prenom, int numtel, String adresse, String email) {
+    public Personne(Integer id, String nom, String prenom, Integer numtel, String adresse, String email) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.numtel = numtel;
         this.adresse = adresse;
         this.email = email;
+    }
+
+    public Personne(String nom) {
+        this.nom = nom;
     }
 
     

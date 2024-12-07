@@ -23,6 +23,10 @@ public class Commande {
         articles=new HashMap<>();
     }
 
+    public Commande(int numCommande) {
+        this.numCommande = numCommande;
+    }
+
     public Commande() {
         articles=new HashMap<>();
     }

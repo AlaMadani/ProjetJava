@@ -113,7 +113,7 @@ public class AdminDashboardController implements Initializable {
              Stage st =new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("Transactions.fxml"));
             Scene scene = new Scene(root);
-            st.setTitle("Liste des Transactions");
+            st.setTitle("Liste des Factures");
             st.setScene(scene);
             
             st.show();

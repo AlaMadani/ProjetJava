@@ -17,12 +17,21 @@ public final class Facture_Client extends Facture{
         super(numFact, dateFact, commande, montant);
         this.client = client;
     }
-
+    
+    public Integer getNumCommande(){
+        return commande.getNumCommande();
+    }
     
     public Facture_Client() {
     }
     public Client getClient() {
         return client;
+    }
+    public String getNom(){
+        return client.getNom();
+    }
+    public void setNom(String a){
+        client.setNom(a);
     }
     public void setClient(Client client) {
         this.client = client;

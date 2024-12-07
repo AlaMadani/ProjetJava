@@ -34,18 +34,18 @@
                         <ToggleGroup fx:id="g1" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="radioNew" mnemonicParsing="false" text="Nouveau Article" toggleGroup="$g1" />
+                  <RadioButton fx:id="radioNew" mnemonicParsing="false" text="Nouveau" toggleGroup="$g1" />
                   <ComboBox fx:id="choiceBox" prefWidth="150.0" />
                </children>
             </VBox>
             <VBox>
                <children>
                   <Label text="Code Article" />
-                  <TextField />
+                  <TextField fx:id="codef" />
                   <Label text="Prix d'achat" />
-                  <TextField />
+                  <TextField fx:id="prixaf" />
                   <Label text="Stock" />
-                  <TextField />
+                  <TextField fx:id="stockf" />
                   <Label text="Label" />
                   <TextField />
                </children>
@@ -53,9 +53,9 @@
             <VBox>
                <children>
                   <Label text="Libelle" />
-                  <TextField />
+                  <TextField fx:id="libf" />
                   <Label text="Prix de vente" />
-                  <TextField />
+                  <TextField fx:id="prixvf" />
                   <Label text="Label" />
                   <TextField />
                   <Label text="Label" />

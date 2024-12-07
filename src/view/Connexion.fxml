@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane stylesheets="@conn.css" prefHeight="362.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ConnexionController">
+<StackPane prefHeight="362.0" prefWidth="600.0" stylesheets="@conn.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ConnexionController">
    <children>
       <ImageView fitHeight="397.0" fitWidth="597.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Screenshot%202024-12-01%20134714.jpg" />
          </image>
       </ImageView>
-      <VBox fx:id="int2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0" >
+      <VBox fx:id="int2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0">
                <VBox.margin>
@@ -41,9 +41,9 @@
                   <VBox prefHeight="94.0" prefWidth="230.0" spacing="5.0">
                      <children>
                         <Label text="Nom d'utilisateur :" />
-                        <TextField alignment="CENTER" promptText="ex: mohamed" />
+                        <TextField fx:id="user" alignment="CENTER" promptText="ex: mohamed" />
                         <Label text="Mot de passe :" />
-                        <PasswordField alignment="CENTER" promptText="med123secret" />
+                        <PasswordField fx:id="pwd" alignment="CENTER" promptText="med123secret" />
                      </children>
                   </VBox>
                </children>

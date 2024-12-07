@@ -43,7 +43,7 @@ public class CaissierDashboardController implements Initializable {
              Stage st =new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("AjouterCommande.fxml"));
             Scene scene = new Scene(root,400,400);
-            st.setTitle("Ajout Commande");
+            st.setTitle("Ajout Facture");
             st.setScene(scene);
             
             st.show();

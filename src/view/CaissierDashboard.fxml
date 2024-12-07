@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="int3" stylesheets="@general.css" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CaissierDashboardController">
+<VBox fx:id="int3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@general.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CaissierDashboardController">
    <children>
       <Label text="Tableau de bord Caissier">
          <font>
@@ -50,7 +50,7 @@
             <VBox alignment="TOP_CENTER" prefHeight="318.0" prefWidth="304.0">
                <children>
                   <HBox prefHeight="42.0" prefWidth="294.0" />
-                  <Button mnemonicParsing="false" onAction="#clickedadd" prefHeight="79.0" prefWidth="267.0" text="+Ajouter Commande">
+                  <Button mnemonicParsing="false" onAction="#clickedadd" prefHeight="79.0" prefWidth="267.0" text="+Ajouter Facture">
                      <VBox.margin>
                         <Insets top="50.0" />
                      </VBox.margin>

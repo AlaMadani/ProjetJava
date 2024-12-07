@@ -1,23 +1,20 @@
-.root{
-  -fx-background: #333333;
-  -fx-text-fill: -text-dark;
-  -fx-prompt-text-fill: rgba(255,255,255,.3);
-  -text-disabled: -text-disabled-dark;
-  -background-disabled:rgba(255,255,255,.12);
-  -background-fill: -text-dark;
 
+.root {
+    -fx-background-image: url("texture-background-with-shawls.jpg");
+    -fx-background-size: cover; /* Adjust as needed: cover, contain, auto */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
 }
-.label {
-    -fx-font-family: "Papyrus";
-}
-/* Button Style */
+
 .button {
-    -fx-background-color: #333333; /* Dark background */
-    -fx-text-fill: white; /* White text */
-    -fx-border-color: #555555; /* Slightly lighter border */
+  
     -fx-border-radius: 5px; /* Rounded corners */
 /* Padding inside the button 
    -fx-font-weight: bold;*/
+}
+
+#deletb {
+    -fx-text-fill: red;
 }
 
 .button:hover {
@@ -32,9 +29,6 @@
 
 /* TextField Style */
 .text-field {
-    -fx-background-color: #444444; /* Dark background */
-    -fx-text-fill: white; /* White text */
-    -fx-border-color: #555555; /* Slightly lighter border */
     -fx-border-radius: 5px; /* Rounded corners */
     -fx-font-size: 14px; /* Font size */
 }
@@ -117,4 +111,62 @@
 .combo-box .list-cell:hover {
     -fx-background-color: #444444; /* Hover effect on list items */
     -fx-text-fill: #0078d4; /* Blue text on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table-view {
+    -fx-background-color: #333333; 
+    -fx-text-fill: white;
+    -fx-border-color: #555555; 
+    -fx-border-radius: 5px; 
+}
+
+.table-column-header {
+    -fx-background-color: #0066ff;
+    -fx-text-fill: black;
+    -fx-font-weight: bold; 
+}
+
+.table-row-cell {
+    -fx-background-color: transparent; 
+    -fx-text-fill: white; 
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #444444;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #555555; 
+}
+
+.table-cell {
+    -fx-padding: 5px; 
+    -fx-font-size: 12px; 
+    -fx-text-fill: white; 
+    -fx-alignment: CENTER_LEFT; 
+}
+
+.scroll-bar {
+    -fx-background-color: #555555; 
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #444444; 
 }

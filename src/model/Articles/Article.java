@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author PC
  */
-public class Article {
+public class Article{
     private int codeArticle;
     private String nom;
     private double prixa;

@@ -10,6 +10,6 @@ package model.Articles;
  */
 public interface GestionStock {
     public void ajouterArticle(Boutique b,Article a);
-    public void suppArticle(Boutique b,Article a);
+    public void suppArticle(Boutique b,Article a) throws StockInsuffisantException;
     public int verifierStock(Article a);
 }

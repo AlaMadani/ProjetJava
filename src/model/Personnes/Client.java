@@ -24,6 +24,11 @@ public final class Client extends Personne{
         super(id);
         listTransaction=new ArrayList<>();
     }
+
+    public Client(String nom) {
+        super(nom);
+    }
+    
     
     public String getTypeClient() {
         return typeClient;
