@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package view;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,35 +29,37 @@ import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 import model.Articles.Article;
+import model.Operations.Facture_Client;
+import view.BoutiqueVetements;
 
 /**
  * FXML Controller class
  *
  * @author PC
  */
-public class ArticlesController implements Initializable {
+public class TransactionsController implements Initializable {
 
     @FXML
     private VBox int4;
     @FXML
-    private TableView<Article> tableview;
+    private TableView<Facture_Client> tableview;
     @FXML
     private Button deletb;
     @FXML
     private TextField searchField;
     @FXML
     private Button searchButton;
-    private ObservableList<Article> filteredData = FXCollections.observableArrayList();
+    private ObservableList<Facture_Client> filteredData = FXCollections.observableArrayList();
     @FXML
-    private TableColumn<Article, Integer> Code;
+    private TableColumn<Facture_Client, Integer> numf;
     @FXML
-    private TableColumn<Article, String> libelle;
+    private TableColumn<Facture_Client, String> clientf;
     @FXML
-    private TableColumn<Article, Double> prixa;
+    private TableColumn<Facture_Client, Integer> numcom;
     @FXML
-    private TableColumn<Article, Double> prixv;
+    private TableColumn<Facture_Client, String> datef;
     @FXML
-    private TableColumn<Article, Integer> stock;
+    private TableColumn<Facture_Client, Double> montf;
 
     /**
      * Initializes the controller class.
@@ -65,17 +67,17 @@ public class ArticlesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tableview.setEditable(true);
-        Code.setCellValueFactory(new PropertyValueFactory<>("codeArticle"));
-        libelle.setCellValueFactory(new PropertyValueFactory<>("Nom"));
-        prixa.setCellValueFactory(new PropertyValueFactory<>("prixa"));
-        prixv.setCellValueFactory(new PropertyValueFactory<>("prixv"));
-        stock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+        numf.setCellValueFactory(new PropertyValueFactory<>("NumFact"));
+        clientf.setCellValueFactory(new PropertyValueFactory<>("Nom"));
+        numcom.setCellValueFactory(new PropertyValueFactory<>("NumCommande"));
+        datef.setCellValueFactory(new PropertyValueFactory<>("DateFact"));
+        montf.setCellValueFactory(new PropertyValueFactory<>("Montant"));
         
         
         deletb.setOnAction(event -> {
-        Article selectedArticle = tableview.getSelectionModel().getSelectedItem();
-        if (selectedArticle != null) {
-            BoutiqueVetements.getInstance().getArticleList().remove(selectedArticle);
+        Facture_Client selectedfact = tableview.getSelectionModel().getSelectedItem();
+        if (selectedfact != null) {
+            BoutiqueVetements.getInstance().getFactureList().remove(selectedfact);
         }
     });
         
@@ -83,12 +85,12 @@ public class ArticlesController implements Initializable {
         searchButton.setOnAction(event -> {
         String searchText = searchField.getText().toLowerCase();
         if (!searchText.isEmpty()) {
-            filteredData.setAll(BoutiqueVetements.getInstance().getArticleList().filtered(article ->
-                article.getNom().toLowerCase().contains(searchText)
+            filteredData.setAll(BoutiqueVetements.getInstance().getFactureList().filtered(Facture_Client ->
+            Facture_Client.getNom().toLowerCase().contains(searchText)
             ));
             tableview.setItems(filteredData);
         } else {
-            tableview.setItems(BoutiqueVetements.getInstance().getArticleList());
+            tableview.setItems(BoutiqueVetements.getInstance().getFactureList());
         }
     });
         
@@ -99,18 +101,14 @@ public class ArticlesController implements Initializable {
          
          
    
-    Code.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-    Code.setOnEditCommit(event -> {Article article = event.getRowValue(); article.setCodeArticle(event.getNewValue());});
-    libelle.setCellFactory(TextFieldTableCell.forTableColumn());
-    libelle.setOnEditCommit(event -> {Article article = event.getRowValue(); article.setNom(event.getNewValue());});
-    prixa.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
-    prixa.setOnEditCommit(event -> {Article article = event.getRowValue(); article.setPrixa(event.getNewValue());});
-    prixv.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
-    prixv.setOnEditCommit(event -> {Article article = event.getRowValue(); article.setPrixv(event.getNewValue());});
-    stock.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
-    stock.setOnEditCommit(event -> {Article article = event.getRowValue(); article.setCodeArticle(event.getNewValue());});
+    clientf.setCellFactory(TextFieldTableCell.forTableColumn());
+    clientf.setOnEditCommit(event -> {Facture_Client facture = event.getRowValue(); facture.setNom(event.getNewValue());});
+    montf.setCellFactory(TextFieldTableCell.forTableColumn(new DoubleStringConverter()));
+    montf.setOnEditCommit(event -> {Facture_Client facture = event.getRowValue(); facture.setMontant(event.getNewValue());});
+    datef.setCellFactory(TextFieldTableCell.forTableColumn());
+    datef.setOnEditCommit(event -> {Facture_Client facture = event.getRowValue(); facture.setDateFact(event.getNewValue());});
     
-    tableview.setItems(BoutiqueVetements.getInstance().getArticleList());
+    tableview.setItems(BoutiqueVetements.getInstance().getFactureList());
     }    
 
     @FXML
@@ -118,7 +116,7 @@ public class ArticlesController implements Initializable {
           int4.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Accueil.fxml"));
             Scene scene = new Scene(root,728,408);
             st.setTitle("Accueil");
             st.setScene(scene);
@@ -134,7 +132,7 @@ public class ArticlesController implements Initializable {
           int4.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/AdminDashboard.fxml"));
             Scene scene = new Scene(root);
             st.setTitle("Admin Dashboard");
             st.setScene(scene);
@@ -154,9 +152,9 @@ public class ArticlesController implements Initializable {
     private void clickedAjout(ActionEvent event) {
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("AjoutArticle.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/AjouterCommande.fxml"));
             Scene scene = new Scene(root,400,400);
-            st.setTitle("Ajout Article");
+            st.setTitle("Ajout Facture");
             st.setScene(scene);
             
             st.show();

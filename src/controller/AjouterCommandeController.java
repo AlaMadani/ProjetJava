@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package view;
+package controller;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 import model.Operations.Commande;
 import model.Operations.Facture_Client;
 import model.Personnes.Client;
+import view.BoutiqueVetements;
 
 /**
  * FXML Controller class

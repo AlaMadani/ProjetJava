@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="int3" stylesheets="@general.css" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AdminDashboardController">
+<VBox fx:id="int3" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@general.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardController">
    <children>
       <Label text="Tableau de bord admin">
          <font>
@@ -149,7 +149,7 @@
                <children>
                   <HBox alignment="BOTTOM_RIGHT" prefHeight="70.0" prefWidth="373.0" spacing="20.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#clickedTrans" prefHeight="30.0" prefWidth="136.0" text="Voir Transactions">
+                        <Button mnemonicParsing="false" onAction="#clickedTrans" prefHeight="30.0" prefWidth="136.0" text="Voir Factures">
                            <HBox.margin>
                               <Insets right="5.0" />
                            </HBox.margin>

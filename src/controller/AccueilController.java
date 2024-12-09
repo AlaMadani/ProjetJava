@@ -19,7 +19,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import view.BoutiqueVetements;
-import view.ConnexionController;
 
 /**
  * FXML Controller class

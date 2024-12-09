@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package view;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,6 +22,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import view.BoutiqueVetements;
 
 /**
  * FXML Controller class
@@ -53,13 +54,13 @@ public class ConnexionController implements Initializable {
     private void clickedlogin(ActionEvent event) {
         String str="";
         if(poste.getText().equals("ADMINISTRATEUR") && user.getText().equals("admin") && pwd.getText().equals("admin")){
-            str="AdminDashboard.fxml";
+            str="/view/AdminDashboard.fxml";
         }
         else if(poste.getText().equals("Responsable Stock")  && user.getText().equals("stock") && pwd.getText().equals("stock")){
-              str="ResponsableStockDashboard.fxml";
+              str="/view/ResponsableStockDashboard.fxml";
         }
         else if(poste.getText().equals("Caissier")  && user.getText().equals("caissier") && pwd.getText().equals("caissier")) {
-            str="CaissierDashboard.fxml";
+            str="/view/CaissierDashboard.fxml";
         }
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -88,7 +89,7 @@ public class ConnexionController implements Initializable {
          int2.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Accueil.fxml"));
             Scene scene = new Scene(root,728,408);
             st.setTitle("Accueil");
             st.setScene(scene);

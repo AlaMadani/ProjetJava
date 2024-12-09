@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package view;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,6 +29,7 @@ import javafx.stage.Stage;
 import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.IntegerStringConverter;
 import model.Personnes.Employer;
+import view.BoutiqueVetements;
 
 /**
  * FXML Controller class
@@ -133,7 +134,7 @@ public class EmployersController implements Initializable {
           int4.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Accueil.fxml"));
             Scene scene = new Scene(root,728,408);
             st.setTitle("Accueil");
             st.setScene(scene);
@@ -149,7 +150,7 @@ public class EmployersController implements Initializable {
           int4.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("AdminDashboard.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/AdminDashboard.fxml"));
             Scene scene = new Scene(root);
             st.setTitle("Admin Dashboard");
             st.setScene(scene);
@@ -169,7 +170,7 @@ public class EmployersController implements Initializable {
     private void clickedAjout(ActionEvent event) {
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("AjoutEmploye.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/AjoutEmploye.fxml"));
             Scene scene = new Scene(root,400,400);
             st.setTitle("Admin Dashboard");
             st.setScene(scene);

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package view;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import view.BoutiqueVetements;
 
 /**
  * FXML Controller class
@@ -42,7 +43,7 @@ public class AdminDashboardController implements Initializable {
           int3.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Employers.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Employers.fxml"));
             Scene scene = new Scene(root);
             st.setTitle("Liste des employers");
             st.setScene(scene);
@@ -58,7 +59,7 @@ public class AdminDashboardController implements Initializable {
           int3.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Articles.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Articles.fxml"));
             Scene scene = new Scene(root);
             st.setTitle("Liste des articles");
             st.setScene(scene);
@@ -74,7 +75,7 @@ public class AdminDashboardController implements Initializable {
           int3.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Accueil.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Accueil.fxml"));
             Scene scene = new Scene(root,728,408);
             st.setTitle("Accueil");
             st.setScene(scene);
@@ -90,7 +91,7 @@ public class AdminDashboardController implements Initializable {
           int3.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Clients.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Clients.fxml"));
             Scene scene = new Scene(root);
             st.setTitle("Liste des clients");
             st.setScene(scene);
@@ -111,7 +112,7 @@ public class AdminDashboardController implements Initializable {
           int3.getScene().getWindow().hide();
          try {
              Stage st =new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Transactions.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/Transactions.fxml"));
             Scene scene = new Scene(root);
             st.setTitle("Liste des Factures");
             st.setScene(scene);
